@@ -7,6 +7,7 @@ button.addEventListener('click', function () {
     getJoke();
 });
 
+
 function getJoke() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url);
@@ -17,4 +18,7 @@ function getJoke() {
     xhr.send();
 }
 
-window.onload = getJoke;
+
+document.addEventListener('DOMContentLoaded', function () {
+    getJoke();
+})
